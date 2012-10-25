@@ -4,8 +4,7 @@
 
 jQuery(document).ready ->
   setTimeout (->
-    source = new EventSource("/messages")
+    source = new EventSource("/stream")
     source.addEventListener "refresh", (e) ->
-      window.location.reload()
-
+      $('.stream').prepend("<p>" + e.data + "</p>")
   ), 1
