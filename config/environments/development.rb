@@ -34,4 +34,5 @@ Realtime::Application.configure do
 
   config.preload_frameworks = true
   config.allow_concurrency = true
+  config.cache_classes = true
 end
